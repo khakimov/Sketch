@@ -1,0 +1,21 @@
+body {
+    background-color: #fbf7f3;
+    margin: 0;
+}
+
+form#login {
+  position: absolute;
+  top: 0;
+  background-color: #323232;
+  text-align: center;
+  padding: 1em 2em;
+  display: none;
+  border-bottom: 2px solid #444;
+  border-left: 2px solid #444;
+  border-right: 2px solid #444; }
+  
+  form#login label {
+    font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+    color: white; }
+    form#login label[for="password"] {
+      margin-left: 1em; }
