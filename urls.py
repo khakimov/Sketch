@@ -8,9 +8,9 @@ from django.conf import settings
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'frame.views.index', name='index'),
-    url(r'^login$', 'frame.views.signup', name='signup'),
-    url(r'^register$', 'frame.views.register', name='register'),
-    url(r'^user_info$', 'frame.views.user_info', name='user_info'),
+    url(r'^login/$', 'frame.views.signup', name='signup'),
+    url(r'^register/$', 'frame.views.register', name='register'),
+    url(r'^user_info/$', 'frame.views.user_info', name='user_info'),
     url(r'^add_task/$', 'frame.views.add_task', name='add_task'),
     url(r'^del_task/$', 'frame.views.del_task', name='del_task'),
     url(r'^update_task/$', 'frame.views.update_task', name='update_task'),
