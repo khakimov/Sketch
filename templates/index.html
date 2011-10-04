@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Sketch</title>
+	<link rel="stylesheet" type="text/css" href="/media/css/applications.css">
+    <script src="/media/js/jquery-1.6.4.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/media/js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/media/js/applications.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="ajax-status"></div>
+<div id="info"></div>
+<div id='task-header'>
+        <input class='textfield' name='name' tabindex='0' type='text' />
+    <a href='/' id='add'></a>
+</div>
+<div id='tasks'>
+  <ul>
+  </ul>
+</div>
+<div id="form"></div>
+
+<form id="login" action="/login">
+    {% csrf_token %}
+    {{ login }}
+	<input type="submit" name="login" value="Login" id="login"> <a href="/register">register</a>
+	<div id="errors"></div>
+</form>
+
+<form id="register" action="/register">
+    {% csrf_token %}
+    {{ register }}
+	<input type="submit" name="register" value="Register" id="register"> <a href="/login">login</a>
+	<div id="errors"></div>
+</form>
+</body>
+</html>

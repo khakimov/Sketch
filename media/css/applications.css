@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-form#login {
+form#login, form#register {
   position: absolute;
   top: 0;
   background-color: #323232;
@@ -14,8 +14,110 @@ form#login {
   border-left: 2px solid #444;
   border-right: 2px solid #444; }
   
-  form#login label {
+  form#login, form#register label {
     font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
     color: white; }
-    form#login label[for="password"] {
+    form#login, form#register label[for="password"] {
       margin-left: 1em; }
+      form a {
+          color: white;
+          font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+          font-size: 12px;
+      }
+      form#register #errors {
+          color: red;
+          font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+          text-align: left;
+      }
+
+#ajax-status {
+position: absolute;
+top: 0;
+right: 0;
+background-color: #ddd;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+padding: 5px 10px;
+margin: 4px;
+font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+display: none; }
+body #info {
+    width: 660px;
+    height: 10px;
+    margin: 10px auto 1px auto;
+    position: relative;
+}
+body #tasks {
+  width: 660px;
+  margin: 0 auto; }
+  body #tasks ul {
+    margin: 0;
+    padding: 0; }
+    body #tasks ul li {
+      position: relative;
+      margin: 0 0 1px 0;
+      padding: 0.5em 1em;
+      list-style-type: none;
+      background-color: #eb363b; }
+
+      body #tasks ul li .completion {
+        position: absolute;
+        top: 11px;
+        left: 692px;
+        height: 16px;
+        width: 252px; }
+
+     p {
+            font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 22px;
+            color: white;
+        }
+
+     .over {
+          font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+          font-size: 22px;
+          color: green;
+      }
+      
+
+
+body #task-header, body #task-footer {
+  background-color: #eb363b;
+  width: 660px;
+  height: 40px;
+  margin: 100px auto 1px auto;
+  position: relative; }
+  body #task-header a#add, body #task-footer a#add {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin: 12px 16px 0 0;
+    background-image: url(../i/add.png);
+    cursor: pointer;
+    cursor: hand; }
+    body .textfield {
+      width: 550px;
+      height: 30px;
+      font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+      font-size: 22px;
+      border: none;
+      margin: 5px; }
+      
+.todo-destroy {
+  position: absolute;
+  right: 25px;
+  top: 34px;
+  cursor: pointer;
+  display: none;
+  width: 20px;
+  height: 20px;
+  background: url(../i/destroy.png) no-repeat 0 0;
+}
+    li:hover .todo-destroy {
+      display: block;
+    }
+    .todo-destroy:hover {
+      background-position: 0 -20px;
+    }
+

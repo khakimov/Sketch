@@ -7,13 +7,14 @@ from django.conf import settings
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'sk.views.home', name='home'),
-    # url(r'^sk/', include('sk.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'frame.views.index', name='index'),
+    url(r'login$', 'frame.views.signup', name='signup'),
+    url(r'register$', 'frame.views.register', name='register'),
+    url(r'user_info$', 'frame.views.user_info', name='user_info'),
+    url(r'add_task/$', 'frame.views.add_task', name='add_task'),
+    url(r'del_task/$', 'frame.views.del_task', name='del_task'),
+    url(r'update_task/$', 'frame.views.update_task', name='update_task'),
+    url(r'tasks/$', 'frame.views.tasks', name='tasks'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name='logout'),
     url(r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),   
 )
